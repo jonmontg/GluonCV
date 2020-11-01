@@ -20,4 +20,4 @@ def print_topk(network: gcv.model_zoo.HybridBlock, image, k: int) -> None:
         class_index = topk_indices[i].astype('int').asscalar()
         class_label = network.classes[class_index]
         class_probability = prediction[class_index]
-        print('#{} {} ({:0.3}%)'.format(i + 1, class_label, class_probability.asscalar() * 100))
+        print('#{} {} ({:04.2f}%)'.format(i + 1, class_label, class_probability.asscalar() * 100))
