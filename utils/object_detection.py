@@ -38,6 +38,7 @@ def count_object(network: gcv.model_zoo.HybridBlock, one_image_batch: mx.nd.NDAr
     Counts the number of instances of the given object appear in the image.
     :param network: GluonCV HybridBlock trained to recognize objects
     :param one_image_batch: The image array in [Batch Number, Color, Height, Width] format
+    :param detection_threshold: The minimum detection probability threshold to consider a classification
     :param object_label: The label of the object to count
     :return: The number of predicted instances of the object
     """
